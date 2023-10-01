@@ -1,0 +1,114 @@
+# Ignore bin and obj directories
+bin/
+obj/
+
+# Ignore User-specific files
+.vscode/
+.vscode-test/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore project user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore artifacts and build logs
+*.swp
+*.swo
+*.swn
+*.bak
+*.[Cc]ache
+*.log
+*.npm-debug.log
+
+# Visual Studio files
+.vscode/
+.vscode-test/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
