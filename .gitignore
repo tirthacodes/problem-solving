@@ -112,3 +112,92 @@ $RECYCLE.BIN/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+#-------------------------------------------------------#
+#For Java
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see https://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Idea files
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# NetBeans files
+nbproject/private/
+build/
+
+# VS Code files
+.vscode/
+
+# Gradle files
+.gradle/
+build/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# User-specific files
+*.iml
+*.ipr
+*.iws
+*.swp
+
+# Compiled Python files
+*.pyc
+
+# Compiled Ruby files
+*.rb[co]
+
+# Compiled Java files
+*.class
+
+# Compiled C++ files
+*.o
+
+# Compiled Visual Basic files
+*.obj
+
+# Compiled Perl files
+*.plc
+*.plx
+*.perl
+
+# Compiled PHP files
+*.php[ds]
+
+# Environment configuration files
+.env
+
+
