@@ -1,0 +1,84 @@
+//Write a program that translates English text into a simplified version of Pig Latin. Apply the following rules:
+
+//If a word starts with a vowel (A, E, I, O, U, case-insensitive), append "way" to the end of the word.
+//If a word starts with a consonant, move the first consonant (or consonant cluster) to the end of the word and append "ay".
+//Ensure that any punctuation at the end of a word remains at the very end after the translation.
+//Example:
+
+//Input: "Apple, pie and oranges!"
+//Output: "Appleway, iepay andway orangesway!"
+
+
+
+using System;
+using System.Text;
+using System.Text.RegularExpressions;
+
+public class PigLatinTranslator
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a sentence to translate to Pig Latin:");
+        string input = Console.ReadLine();
+
+        Console.WriteLine(TranslateToPigLatin(input));
+    }
+
+    public static string TranslateToPigLatin(string input)
+    {
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+        StringBuilder result = new StringBuilder();
+
+        MatchCollection matches = Regex.Matches(input, @"(\w+)([.,!?;:]*)|(\s+)");
+
+        foreach (Match match in matches)
+        {
+            if (match.Groups[1].Success)
+            {
+                string word = match.Groups[1].Value;
+                string punctuation = match.Groups[2].Value;
+
+                if (string.IsNullOrEmpty(word))
+                {
+                    continue;
+                }
+
+                char firstChar = char.ToLower(word[0]);
+
+                if (Array.IndexOf(vowels, firstChar) != -1)
+                {
+                    result.Append(word).Append("way").Append(punctuation);
+                }
+                else
+                {
+                    int firstVowelIndex = -1;
+                    for (int i = 0; i < word.Length; i++)
+                    {
+                        if (Array.IndexOf(vowels, char.ToLower(word[i])) != -1)
+                        {
+                            firstVowelIndex = i;
+                            break;
+                        }
+                    }
+
+                    if (firstVowelIndex == -1)
+                    {
+                        result.Append(word).Append("ay").Append(punctuation);
+                    }
+                    else
+                    {
+                        string leadingConsonants = word.Substring(0, firstVowelIndex);
+                        string restOfWord = word.Substring(firstVowelIndex);
+                        result.Append(restOfWord).Append(leadingConsonants).Append("ay").Append(punctuation);
+                    }
+                }
+            }
+            else if (match.Groups[3].Success)
+            {
+                result.Append(match.Groups[3].Value);
+            }
+        }
+
+        return result.ToString().TrimEnd();
+    }
+}
